@@ -1,7 +1,7 @@
 postgresql: &postgresql
   adapter: postgresql
   host: postgres
-  port: 5440
+  port: 5432
   username: diaspora
   password: diasporaCommunity123
   encoding: unicode

@@ -1,0 +1,17 @@
+LEER EL SIGUIENTE DOCUMENTO:
+
+https://hub.docker.com/r/koehn/diaspora/
+
+El resultado de esa lectura da los archivos:
+
+database.yml  diaspora.yml  docker-compose.yml
+
+Lo que hay que editar, para colocar el URL es:
+
+diaspora.yml
+
+Actualmente la URL está puesta en: http://localhost:3000/
+
+Luego ejecutar:
+
+bash commands.sh
