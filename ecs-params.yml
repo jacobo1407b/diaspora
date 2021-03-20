@@ -1,0 +1,7 @@
+version: 1
+task_definition:
+  task_execution_role: sts:AssumeRole
+  ecs_network_mode: awsvpc
+  task_size:
+    mem_limit: 0.5GB
+    cpu_limit: 256
