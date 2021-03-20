@@ -15,7 +15,6 @@ services:
 
   postgres:
     read_only: true
-    mem_limit: 8G
     image: postgres:10-alpine
     environment:
       - POSTGRES_USER=diaspora
