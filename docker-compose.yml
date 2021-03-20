@@ -18,7 +18,7 @@ services:
     mem_limit: 8G
     image: postgres:10-alpine
     tmpfs:
-      - /tmp:size=1G
+      - /tmp:size=8G
     environment:
       - POSTGRES_USER=diaspora
       - POSTGRES_PASSWORD=diasporaCommunity123
@@ -33,7 +33,7 @@ services:
     mem_limit: 384M
     read_only: true
     tmpfs:
-      - /tmp:size=1G
+      - /tmp:size=384M
     command: redis-server --appendonly yes
     volumes:
       - redis:/data
