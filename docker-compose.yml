@@ -1,4 +1,4 @@
-version: '0.2'
+version: '2'
 services:
   diaspora:
     image: koehn/diaspora:latest 
