@@ -1,6 +1,5 @@
 version: 1
 task_definition:
-  task_execution_role: sts:AssumeRole
   task_size:
     mem_limit: 8GB
     cpu_limit: 256
