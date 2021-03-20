@@ -1,5 +1,8 @@
 version: 1
+
 task_definition:
-  task_size:
-    mem_limit: 8GB
-    cpu_limit: 256
+    services:
+        postgres:
+            mem_limit: 8G
+        redis:
+            mem_limit: 384M
