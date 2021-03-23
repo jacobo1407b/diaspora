@@ -1,8 +1,21 @@
 version: 1
-
 task_definition:
-    services:
-        postgres:
-            mem_limit: 8G
-        redis:
-            mem_limit: 384M
+  ecs_network_mode: awsvpc
+  task_execution_role: ecsTaskExecutionRole
+  task_size:
+    mem_limit: 16GB
+  services:
+    postgres:
+      essential: true
+    redis:
+      essential: true
+run_params:
+  network_configuration:
+    awsvpc_configuration:
+      subnets:
+        - subnet-abcd1234
+        - subnet-dcba4321
+      security_groups:
+        - sg-abcd1234
+        - sg-dcba4321
+      assign_public_ip: ENABLED
