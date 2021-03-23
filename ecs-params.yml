@@ -1,6 +1,5 @@
 version: 1
 task_definition:
-  sourcePath: /var/scratch
   ecs_network_mode: bridge
   task_execution_role: ecsTaskExecutionRole
   task_size:

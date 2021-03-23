@@ -6,7 +6,7 @@ services:
       - postgres
       - redis
     volumes:
-      - diaspora-images:/home/diaspora/diaspora/public/uploads/images
+      #- diaspora-images:/home/diaspora/diaspora/public/uploads/images
       - ./diaspora.yml:/home/diaspora/diaspora/config/diaspora.yml:ro
       - ./database.yml:/home/diaspora/diaspora/config/database.yml:ro
     ports:
