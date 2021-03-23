@@ -4,6 +4,7 @@ task_definition:
   task_execution_role: ecsTaskExecutionRole
   task_size:
     cpu_shares: 900
+    cpu: 900
     mem_limit: 16GB
   services:
     postgres:
