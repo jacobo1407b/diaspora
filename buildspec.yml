@@ -9,6 +9,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...    
+      - systemctl start docker
       - docker build -t social-bunbi .      
       - docker tag social-bunbi:latest public.ecr.aws/q3d8j9z8/social-bunbi:latest
   post_build:
