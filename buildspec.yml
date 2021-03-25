@@ -3,7 +3,6 @@ version: 0.2
 phases:
   install:
     commands:
-      - rm -r /var/snap/docker
       - snap stop docker
       - snap start docker
       - nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --host=tcp://127.0.0.1:2375 --storage-driver=overlay2 &
