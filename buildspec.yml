@@ -7,12 +7,8 @@ phases:
       - timeout 15 sh -c "until docker info; do echo .; sleep 1; done"
   pre_build:
     commands:
-      - echo Logging in to Amazon ECR...
-      - aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/q3d8j9z8
+      - docker build -t helloworld .
   build:
     commands:
-      - docker build -t social-bunbi .      
-      - docker tag social-bunbi:latest public.ecr.aws/q3d8j9z8/social-bunbi:latest
-  post_build:
-    commands:
-      - docker push public.ecr.aws/q3d8j9z8/social-bunbi:latest
+      - docker images
+      - docker run helloworld echo "Hello, World!" 
